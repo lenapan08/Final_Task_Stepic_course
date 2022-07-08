@@ -25,6 +25,8 @@ def test_login_page(browser):
     page = MainPage(browser, link)
     page.open()
     page.go_to_login_page()
-    page_2 = LoginPage(browser,link)
+    page_2 = LoginPage(browser, link)
     page_2.should_be_login_page()
+
+
 
