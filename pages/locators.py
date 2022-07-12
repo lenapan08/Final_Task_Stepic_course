@@ -21,3 +21,4 @@ class ProductPageLocators():
     TITTLE_OF_BOOK = (By.CSS_SELECTOR, "div.product_main h1")
     PRICE_OF_BOOK = (By.CSS_SELECTOR, "div.product_main p.price_color")
     PRICE_OF_BOOK_IN_BASKET = (By.CSS_SELECTOR, "div.alert-info div p strong")
+    SUCCESS_MESSAGE = (By.CSS_SELECTOR, "div.alert-success:nth-child(1)")
