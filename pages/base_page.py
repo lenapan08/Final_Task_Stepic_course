@@ -3,7 +3,6 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.common.exceptions import NoAlertPresentException
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support import expected_conditions as EC
-from .basket_page import BasketPage
 from .locators import BasePageLocators
 from .locators import MainPageLocators
 import math
@@ -11,10 +10,6 @@ import math
 
 class BasePage():
     def __init__(self, browser, url, timeout=10):
-        """
-
-        :rtype: object
-        """
         self.browser = browser
         self.url = url
         self.browser.implicitly_wait(timeout)
