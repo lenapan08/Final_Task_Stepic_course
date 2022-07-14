@@ -14,7 +14,6 @@ class LoginPage(BasePage):
         login_url = self.browser.current_url
         assert ("login" in login_url) == True, "'Login' doesnt in URL"
 
-
     def should_be_login_form(self):
         login_link = self.browser.find_element(*MainPageLocators.LOGIN_LINK)
         login_link.click()
@@ -22,7 +21,6 @@ class LoginPage(BasePage):
         assert (field_email is not None) == True, "Field email of form 'Log IN' doesnt present"
         field_pass = self.browser.find_elements(*LoginPageLocators.LOG_IN_PASSWORD)
         assert (field_pass is not None) == True, "Field password  of form 'Log IN' doesnt present"
-
 
     def should_be_register_form(self):
         login_link = self.browser.find_element(*MainPageLocators.LOGIN_LINK)
