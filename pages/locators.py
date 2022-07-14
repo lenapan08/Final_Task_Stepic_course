@@ -3,22 +3,28 @@ from selenium.webdriver.common.by import By
 class BasePageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
+    USER_ICON = (By.CSS_SELECTOR, ".icon-user")
 
 class MainPageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     BASKET = (By.LINK_TEXT, "View basket")
 
+
 class BasketPageLocators():
     TITTLE_ITERMS_IN_BASKET = (By.CSS_SELECTOR, "h2.col-sm-6.h3")
+    BASKET_EMPTY = (By.CSS_SELECTOR, "div#content_inner p")
+
 
 class LoginPageLocators():
     LOG_IN_EMAIL_ADDRESS = (By.ID, "#id_login-username")
     LOG_IN_PASSWORD = (By.ID, "#id_login-password")
-    REG_EMAIL_ADDRESS = (By.ID, "#id_registration-email")
-    REG_PASSWORD = (By.ID, "#id_registration-password1")
-    REG_CONFIRM_PASSWORD = (By.ID, "#id_registration-password2")
+    REG_EMAIL_ADDRESS = (By.CSS_SELECTOR, "input#id_registration-email")
+    REG_PASSWORD = (By.CSS_SELECTOR, "input#id_registration-password1")
+    REG_CONFIRM_PASSWORD = (By.CSS_SELECTOR, "input#id_registration-password2")
+    BUTTON_REGISTER = (By.XPATH, '//button[@value = "Register"]')
     FORM_LOG_IN = (By.ID, "#login_form")
     FORM_REGISTER = (By.ID, "#register_form")
+
 
 class ProductPageLocators():
     BUTTON_BASKET = (By.CSS_SELECTOR, "button.btn.btn-add-to-basket")
